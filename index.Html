@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<!--include into angular index.html head-->
+<head >
+<meta charset="utf-8">
+<title>Andrew M Gerstner</title> 
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous"> 
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-2017.css">
+<link href='https://fonts.googleapis.com/css?family=Fjalla One' rel='stylesheet'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDCeGl4467cxBVAL_pQoWanll2u_MBjy7k",
+    authDomain: "myprojectjdfk.firebaseapp.com",
+    databaseURL: "https://myprojectjdfk.firebaseio.com",
+    projectId: "myprojectjdfk",
+    storageBucket: "",
+    messagingSenderId: "1053700642006"
+  };
+  firebase.initializeApp(config);
+</script>
+    <script>function toggleNav() {
+    var x = document.getElementById("navBar");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}</script>
+<!--include into angular index.html head-->
+<style>
+    /*include into style.css angular*/
+    .photo{
+       min-height: 400px;
+    }
+    footer{
+        background-color: #9b3341;
+    }
+    #content{
+        max-height: 150px;
+    }
+    #me{
+        min-height: 50px;
+    }
+    .work-border{
+        min-height: 35px;
+    }
+
+    #work{
+        min-height: 600px;
+    }
+    #contactMe{
+        min-height: 200px;
+        
+    }
+.carousel-item img {
+  
+    height: 400px;
+}
+    body, html{
+        height: 100%;
+        font-family: 'Fjalla One';
+        background-color: #9b3341; 
+        font-size: 16px;
+        line-height: 1.2em;
+    }
+    
+.parallax-1 {
+    min-height: 100%;
+     background-image: url('https://firebasestorage.googleapis.com/v0/b/myprojectjdfk.appspot.com/o/brosis.jpg?alt=media&token=1c6b1dbc-f8f1-4bed-aed3-09cdd31d1f68');
+}
+
+
+.parallax-2 {
+    min-height: 550px;
+    background-image: url("https://firebasestorage.googleapis.com/v0/b/myprojectjdfk.appspot.com/o/devon3.jpg?alt=media&token=ab7e95f6-4650-49f5-b780-46473c04a222");
+}
+
+
+.parallax-3 {
+    min-height: 550px;
+    background-image: url("https://firebasestorage.googleapis.com/v0/b/myprojectjdfk.appspot.com/o/mariah1.jpg?alt=media&token=b121b97c-8ece-4dcd-b0e9-0445ac1c03b3");
+}
+    
+.parallax-1, .parallax-2, .parallax-3{
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+   @media only screen and (max-width: 1000px) {
+    .parallax-1, .parallax-2, .parallax-3, .parallax4{
+        background-attachment: scroll;
+    }
+}
+        /*minor breakpoint to adjust text size */
+        @media only screen and (min-width: 1000px){
+            p, h2{
+                font-size: 2.4em;
+                line-height: 2.0em;
+            }
+        }
+    @media only screen and (min-width: 768px){
+        p, h2{
+             font-size: 1.6em;
+                line-height: 1.5em;
+        }
+    }
+    /*include into style.css angular*/
+</style>
+   
+
+</head>
+
+    
+<body>
+
+
+<div class="w3-top">
+        <div class="w3-bar w3-neutral-gray" id="myNav">
+              <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right"  onclick="toggleNav()" title="Toggle Navigation Menu">
+                <i class="fa fa-bars"></i>
+              </a>
+              <a href="#home" class="w3-bar-item w3-button">HOME</a>
+              <a href="#aboutMe" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT</a>  
+              <a href="#myWork" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i>MY WORK</a>
+                <a href="#contactMe" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a> 
+          </div>
+  
+  
+        <div id="navBar" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+              <a href="#aboutMe" class="w3-bar-item w3-button" onclick="toggleNav()">ABOUT</a>
+              <a href="#myWork" class="w3-bar-item w3-button" onclick="toggleNav()">MY WORK</a>
+              <a href="#contactMe" class="w3-bar-item w3-button" onclick="toggleNav()">CONTACT</a>
+         </div>
+      
+  </div>
+
+    
+    
+<div class="parallax-1 w3-display-container" id="homePage">
+    <div class="w3-display-middle">
+        <span class="w3-jumbo w3-text-white w3-opacity w3-hover-opacity-off">Andrew<br class="w3-hide-large w3-hide-medium"><br class="w3-hide-large w3-hide-medium"> Gerstner</span>
+    </div>
+</div>
+    
+<!-- about me component angular-->
+<div>
+<div class="w3-2017-navy-peony w3-opacity-min work-border container"></div> 
+<div class=" w3-container  w3-sand w3-padding-64 w3-card-4" id="aboutMe">
+  <h2 class="w3-center w3-xxlarge">ABOUT ME</h2>
+  <p class="w3-container w3-container w3-padding container col-sm">My Name is Andrew Gerstner and I am a student of Information Technologies at the University of Missouri and am going into my final year.  I am currently in Fenton, Mo until the beginning of the school year.  In the fall I will be beginning a research project looking into virtual reality simulation, and in the spring I begin my capstone design, so I will be limited for work.     My main contact information can be found on this page if you wish to reach me.</p>
+  <div class="w3-row">
+    <div class="w3-col m12 w3-center ">
+      <p><b><i class="fa fa-user w3-margin-right"></i>Andrew M. Gerstner</b></p><br>
+        <div>
+      <img src="https://firebasestorage.googleapis.com/v0/b/myprojectjdfk.appspot.com/o/me.jpg?alt=media&token=c82a041b-14b1-4f53-b378-0d840c9aee98" class=" w3-card-4 w3-circle w3-image" alt="Photo of Me" width="350">
+        </div>
+    </div>
+  </div>
+</div>
+<div class="w3-2017-navy-peony w3-opacity-min work-border container"></div> 
+</div>
+ 
+     
+     <!--swap background here-->
+    
+  <div class="parallax-2 w3-display-container">
+    <div class="w3-display-middle">
+        <span class="w3-jumbo w3-text-white w3-opacity w3-hover-opacity-off">INSPIRATION</span>
+    </div>
+  </div>
+<!--about me component angular-->
+<div class="w3-2017-navy-peony w3-opacity-min work-border container w3-center"></div> 
+
+    
+ 
+
+<div class=" w3-sand w3-card-4 w3-center" id="myWork">
+            <div class="w3-center w3-padding-24">Favorite Work</div>
+            
+                <div class="w3-row">
+              <div class="w3-half">
+                <img src="https://source.unsplash.com/user/8moments" style="width:100%" class="img-responsive w3-padding-small photo">
+                <img src="https://source.unsplash.com/user/heytowner" style="width:100%" class="img-responsive w3-padding-small photo">
+              </div>
+            
+              <div class="w3-half">
+                <img src="https://source.unsplash.com/user/luckybeanz" style="width:100%" class="img-responsive w3-padding-small photo">
+                <img src="https://source.unsplash.com/collection/Fog" style="width:100%" class="img-responsive w3-padding-small photo">
+              </div>
+            </div>
+            </div>  
+            <div class="w3-2017-navy-peony w3-opacity-min work-border container"></div> 
+    
+    <div class="parallax-3 w3-display-container">
+    <div class="w3-display-middle">
+     <span class="w3-jumbo w3-text-white w3-opacity w3-hover-opacity-off">MY WORK</span>
+    </div>
+    </div>
+    
+
+<div class="w3-2017-navy-peony w3-opacity-min work-border container w3-center"></div> 
+
+    
+ 
+
+<div class=" w3-sand w3-card-4 w3-center" id="myWork">
+            <div class="w3-center w3-padding-24">Favorite Work</div>
+            
+                <div class="w3-row">
+              <div class="w3-half">
+                <img src="https://firebasestorage.googleapis.com/v0/b/myprojectjdfk.appspot.com/o/devon1.jpg?alt=media&token=f58262be-d7f7-442d-865d-63b088fca208" style="width:100%" class="img-responsive w3-padding-small">
+                <img src="https://firebasestorage.googleapis.com/v0/b/myprojectjdfk.appspot.com/o/flowers%20(1).jpg?alt=media&token=36b22cb6-7dd2-498a-aa97-43df97f07db4" style="width:100%" class="img-responsive w3-padding-small">
+                <img src="https://firebasestorage.googleapis.com/v0/b/myprojectjdfk.appspot.com/o/IMG_3626.jpg?alt=media&token=cede19ef-0f4f-4c9d-85e0-178404d1d09b" style="width:100%" class="img-responsive w3-padding-small">
+                <img src="https://firebasestorage.googleapis.com/v0/b/myprojectjdfk.appspot.com/o/IMG_3644.jpg?alt=media&token=6ccb3930-39c3-484d-9a0d-1f4b0b60920b" style="width:100%" class="img-responsive w3-padding-small">
+              </div>
+            
+              <div class="w3-half">
+                <img src="https://firebasestorage.googleapis.com/v0/b/myprojectjdfk.appspot.com/o/IMG_3664.jpg?alt=media&token=1eba13bf-8c1a-4251-899c-e7b22240ff93" style="width:100%" class="img-responsive w3-padding-small">
+                <img src="https://firebasestorage.googleapis.com/v0/b/myprojectjdfk.appspot.com/o/Little%20deer-11.jpg?alt=media&token=68a0f9f1-1562-443f-9cc7-12b1bb55c21a" style="width:100%" class="img-responsive w3-padding-small">
+                <img src="https://firebasestorage.googleapis.com/v0/b/myprojectjdfk.appspot.com/o/Little%20deer-9.jpg?alt=media&token=0ca3c553-fed4-4803-aea9-8abd2220116d" style="width:100%" class="img-responsive w3-padding-small">
+                <img src="https://firebasestorage.googleapis.com/v0/b/myprojectjdfk.appspot.com/o/Little%20deer-10.jpg?alt=media&token=a95d41dc-7577-43a6-bca9-6728e8ccb860" style="width:100%" class="img-responsive w3-padding-small">
+              </div>
+            </div>
+            </div>  
+            <div class="w3-2017-navy-peony w3-opacity-min work-border container"></div> 
+             <!--My work component angular-->  
+ <!--My work component angular-->   
+
+
+    
+    
+<!-- some component angular-->   
+<div class="w3-container w3-sand w3-card-2 w3-padding-64" id="contactMe">
+  <h3 class="w3-left">Contact Information:</h3>   
+
+    <div class="w3-col m6 w3-panel">
+      <div class="w3-xlarge w3-content w3-padding w3-margin">
+        <i class="fa fa-map-marker fa-fw w3-xlarge w3-margin-right"></i>Columbia, Mo<br><br>
+        <i class="fa fa-phone fa-fw  w3-xlarge w3-margin-right"></i>Phone: +13149179016<br><br>
+        <i class="fa fa-envelope fa-fw w3-xlarge w3-margin-right"></i>Email:  andrew_gerstner@yahoo.com<br><br>
+      </div>
+    </div>
+</div>
+
+<footer class="w3-center w3-2017-navy-peony w3-opacity-min container  w3-padding-24  ">
+  <div class=" container">
+      <h2 class="w3-xlarge">FOLLOW ME:</h2>
+      <div class="w3-xxxlarge">
+    <a href="https://www.facebook.com/andrew.gerstner"> 
+        <i class="fa fa-facebook-official w3-hover-opacity w3-padding-small"></i>
+    </a>
+    <a href="https://www.instagram.com/thegerstnerproject/?hl=en">
+        <i class="fa fa-instagram w3-hover-opacity w3-padding-small"></i>
+    </a>
+        </div>
+  </div> 
+</footer>
+
+
+    
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+<!-- some component angular-->
+    </body>    
+</html>
